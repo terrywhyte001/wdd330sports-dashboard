@@ -3,6 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import path from "path";
 import { fileURLToPath } from "url";
+import mongoose from "mongoose";
 import scoresRoutes from "./routes/scoresRoutes.js";
 import newsRoutes from "./routes/newsRoutes.js";
 
@@ -20,6 +21,14 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 
+// MongoDB connection
+const MONGO_URI = process.env.MONGODB_URI;
+
+mongoose
+  .connect(MONGO_URI)
+  .then(() => console.log("✅ Connected to MongoDB Atlas"))
+  .catch((err) => console.error("❌ MongoDB connection error:", err));
+
 // Routes
 app.use("/api/scores", scoresRoutes);
 app.use("/api/news", newsRoutes);
@@ -30,4 +39,4 @@ app.get("/", (req, res) => {
 });
 
 // Start server
-app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`));
+app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
