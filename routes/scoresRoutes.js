@@ -1,7 +1,8 @@
 import express from "express";
+
 const router = express.Router();
 
-// Placeholder sports scores route
+// Sports scores route (Week 5 placeholder)
 router.get("/", (req, res) => {
   res.json({
     message: "Sample sports scores data (Week 5 placeholder)",
