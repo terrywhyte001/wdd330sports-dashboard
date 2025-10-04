@@ -2,6 +2,7 @@
   "name": "sports-dashboard",
   "version": "1.0.0",
   "description": "Sports Dashboard project with Node.js, Express, and APIs",
+  "type": "module",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
@@ -12,5 +13,9 @@
     "express": "^4.18.2",
     "mongoose": "^8.19.0",
     "node-fetch": "^3.3.2"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
+

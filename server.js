@@ -26,7 +26,7 @@ app.use(express.static(path.join(__dirname, "public")));
 const MONGO_URI = process.env.MONGODB_URI;
 
 mongoose
-  .connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(MONGO_URI)
   .then(() => {
     console.log("✅ Connected to MongoDB Atlas");
 
@@ -37,7 +37,7 @@ mongoose
   })
   .catch((err) => {
     console.error("❌ MongoDB connection error:", err);
-    process.exit(1); // Exit if connection fails
+    process.exit(1);
   });
 
 // Routes
