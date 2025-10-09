@@ -1,0 +1,7 @@
+# Render Deployment Configuration
+
+# Build command (if needed)
+npm install
+
+# Start command
+node server.js
