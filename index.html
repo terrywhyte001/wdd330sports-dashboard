@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sports Dashboard - Get live scores and latest sports news in one place">
+  <meta name="keywords" content="sports, live scores, sports news, dashboard">
+  <title>Sports Dashboard - Live Scores & News</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>🏆 Sports Dashboard</h1>
+    <nav>
+      <button id="refreshBtn" class="btn-primary" aria-label="Refresh all data">
+        🔄 Refresh
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="scores-section" class="dashboard-section">
+      <h2>📊 Live Scores</h2>
+      <div id="loading-scores" class="loading" aria-live="polite">
+        <div class="spinner"></div>
+        <span>Loading live scores...</span>
+      </div>
+      <div id="scores-container" class="content-grid" role="region" aria-label="Live sports scores">
+        <!-- Dynamic content will be inserted here -->
+      </div>
+      <div id="scores-error" class="error-message" style="display: none;" role="alert">
+        <!-- Error messages will appear here -->
+      </div>
+    </section>
+
+    <section id="news-section" class="dashboard-section">
+      <h2>📰 Sports News</h2>
+      <div id="loading-news" class="loading" aria-live="polite">
+        <div class="spinner"></div>
+        <span>Loading sports news...</span>
+      </div>
+      <div id="news-container" class="content-grid" role="region" aria-label="Sports news articles">
+        <!-- Dynamic content will be inserted here -->
+      </div>
+      <div id="news-error" class="error-message" style="display: none;" role="alert">
+        <!-- Error messages will appear here -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Sports Dashboard | WDD 330 Final Project by Evbosaru Iyen Samuel</p>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
